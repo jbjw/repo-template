@@ -1,4 +1,2 @@
-.DS_Store
-test.html
-test.js
+*.log
 node_modules

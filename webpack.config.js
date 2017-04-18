@@ -1,19 +1,20 @@
 // var webpack = require('webpack');
-var path = require('path');
+const path = require('path');
 
-var BUILD_DIR = path.resolve(__dirname, 'dist');
-var APP_DIR = path.resolve(__dirname, 'src');
+const DIST = path.resolve(__dirname, 'dist');
+const SRC = path.resolve(__dirname, 'src');
 
-var config = {
+module.exports = {
+	devtool: 'source-map',
 	devServer: {
 		inline: true,
 		// hot: true,
 		contentBase: 'dist/',
 		port: 80,
 	},
-	entry: path.resolve(APP_DIR, 'main.js'),
+	entry: path.resolve(DIST, 'main.js'),
 	output: {
-		path: BUILD_DIR,
+		path: SRC,
 		filename: 'bundle.js',
 	},
 	module: {
@@ -29,5 +30,3 @@ var config = {
 		],
 	},
 };
-
-module.exports = config;
