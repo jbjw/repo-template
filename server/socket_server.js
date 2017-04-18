@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 //
+=======
+>>>>>>> 6f16b71191c80c73012d4d39667296e0136b35e5
 'use strict';
 
 const util = require( 'util' );
@@ -27,7 +30,11 @@ let count = 0;
 
 wss.on( 'connection', function ( socket ) {
 	socket.id = id++;
+<<<<<<< HEAD
 	console.log( 'connection from: %s %s', socket.id, socket.upgradeReq.connection.remoteAddress );
+=======
+	console.log( 'connection from: {socket.id} {socket.upgradeReq.connection.remoteAddress}' );
+>>>>>>> 6f16b71191c80c73012d4d39667296e0136b35e5
 	wss.broadcast( JSON.stringify( { type: 'message', message: socket.id + ' has joined' } ) );
 	update();
 
