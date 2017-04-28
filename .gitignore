@@ -1,2 +1,11 @@
+<<<<<<< HEAD
+.DS_Store
+.swp
+node_modules
+test.html
+test.js
+test.css
+=======
 *.log
 node_modules
+>>>>>>> 6f16b71191c80c73012d4d39667296e0136b35e5

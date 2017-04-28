@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
@@ -8,6 +9,7 @@ const DIST = path.resolve(__dirname, 'dist');
 const SRC = path.resolve(__dirname, 'src');
 
 module.exports = {
+
 	entry: path.resolve(SRC, 'main.js'),
 	output: {
 		path: DIST,

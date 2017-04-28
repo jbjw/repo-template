@@ -1,15 +1,15 @@
 {
-  "name": "repo-template",
-  "version": "1.0.0",
-  "description": "",
-  "dependencies": {
-    "express": "^4.14.0",
-    "hapi": "^16.0.1",
-		"ws": "^1.1.1",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
-  },
-  "devDependencies": {
+	"name": "repo-template",
+	"version": "1.0.0",
+	"description": "template repo",
+	"dependencies": {
+		"express": "^4.14.0",
+		"hapi": "^16.0.1",
+		"react": "^15.4.2",
+		"react-dom": "^15.4.2",
+		"ws": "^1.1.1"
+	},
+	"devDependencies": {
 		"webpack": "^2.2.1",
 		"webpack-dev-server": "^2.4.2",
     "babel-core": "^6.22.1",
@@ -26,20 +26,20 @@
     "raw-loader": "^0.5.1",
     "style-loader": "^0.16.1"
   },
-  "scripts": {
-		"build": "webpack",
+	"scripts": {
+		"start": "webpack-dev-server",
 		"test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jbjw/repo-template.git"
-  },
-	"keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jbjw/repo-template/issues"
-  },
-  "homepage": "https://github.com/jbjw/repo-template#readme",
+		"build": "webpack"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jbjw/repo-template.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jbjw/repo-template/issues"
+	},
+	"homepage": "https://github.com/jbjw/repo-template#readme",
+	"keywords": []
 }
