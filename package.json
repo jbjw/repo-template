@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "repo-template",
   "version": "1.0.0",
   "description": "template repo",
@@ -32,8 +31,7 @@
     "url": "https://github.com/jbjw/repo-template/issues"
   },
   "homepage": "https://github.com/jbjw/repo-template#readme",
-  "keywords": []
-=======
+  "keywords": [],
 	"name": "repo-template",
 	"version": "1.0.0",
 	"description": "template repo",
@@ -67,5 +65,4 @@
 	},
 	"homepage": "https://github.com/jbjw/repo-template#readme",
 	"keywords": []
->>>>>>> 6f16b71191c80c73012d4d39667296e0136b35e5
 }
