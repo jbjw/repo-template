@@ -1,18 +1,17 @@
-<<<<<<< HEAD
-const webpack = require('webpack');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const webpack = require('webpack')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 
-const path = require('path');
+const path = require('path')
 
-const DIST = path.resolve(__dirname, 'dist');
-const SRC = path.resolve(__dirname, 'src');
+const BUILD = path.resolve(__dirname, 'BUILDBUILD')
+const SRC = path.resolve(__dirname, 'src')
 
 module.exports = {
 
 	entry: path.resolve(SRC, 'main.js'),
 	output: {
-		path: DIST,
+		path: BUILD,
 		filename: 'bundle.js',
 	},
 	module: {
@@ -75,7 +74,7 @@ module.exports = {
 	devServer: {
 		inline: true,
 		// hot: true,
-		contentBase: 'dist/',
+		contentBase: 'build/',
 		port: 80,
 	},
-};
+}
