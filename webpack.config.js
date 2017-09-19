@@ -4,12 +4,11 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 
 const path = require('path')
 
-const BUILD = path.resolve(__dirname, 'BUILDBUILD')
-const SRC = path.resolve(__dirname, 'src')
+const BUILD = path.resolve(__dirname, 'build')
+const SOURCE = path.resolve(__dirname, 'source')
 
 module.exports = {
-
-	entry: path.resolve(SRC, 'main.js'),
+	entry: path.resolve(SOURCE, 'main.js'),
 	output: {
 		path: BUILD,
 		filename: 'bundle.js',
@@ -18,7 +17,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.jsx?$/,
-				include: [SRC],
+				include: [SOURCE],
 				exclude: /node_modules/,
 				loader: 'babel-loader',
 				options: {
@@ -28,7 +27,7 @@ module.exports = {
 			{
 				test: /\.jsx?$/,
 				enforce: 'pre',
-				include: [SRC],
+				include: [SOURCE],
 				exclude: /node_modules/,
 				loader: 'eslint-loader',
 				options: {
@@ -37,7 +36,7 @@ module.exports = {
 			},
 			{
 				test: /\.css?$/,
-				include: [SRC],
+				include: [SOURCE],
 				exclude: /node_modules/,
 				use: [
 					'style-loader',
@@ -49,7 +48,7 @@ module.exports = {
 	plugins: [
 		new CopyWebpackPlugin([
 			{
-				from: 'src/index.html',
+				from: 'source/index.html',
 				to: 'index.html'
 			},
 		]),
