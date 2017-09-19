@@ -28,19 +28,22 @@ function log( req, res, next ) {
 }
 
 function httpsRedirect(req, res, next) {
-	if (!req.secure) {
+	if ( !req.secure ) {
 		console.log('redirecting to https');
 		res.redirect(`https://${req.headers.host}${req.url}`);
 	}
-	next(); return;
+	next()
+	return
 }
 
 const app = express();
 
 // app.use, app.post, etc
-app.use(log);
+app.use( log )
 app.use(express.static(__dirname, {index: 'index.html'}));
-// app.use(httpsRedirect);
+// app.use( httpsRedirect );
+
+// app.use( '/admin', admin ); // mount the sub app
 
 app.get('/', function(req, res){
 	res.send('get received');
@@ -51,17 +54,18 @@ app.post('/', function (req, res) {
 });
 
 const httpServer = http.createServer( app );
-httpServer.listen(httpPort, function () {
-	console.log(`http listening on port ${httpPort}`);
-});
-
-// const server = https.createServer(options, app);
-// httpsServer.listen(httpsPort, function () {
-// 	console.log(`https listening on port ${httpsPort}`);
-// });
+// const httpsServer = https.createServer(options, app);
 
 // res.writeHead(200);
 // res.write
 // res.end(`hello world\n`);
 
 // you can chain createServer().listen()
+
+httpServer.listen(httpPort, function () {
+	console.log(`http listening on port ${httpPort}`);
+});
+
+// httpsServer.listen(httpsPort, function () {
+// 	console.log(`https listening on port ${httpsPort}`);
+// });

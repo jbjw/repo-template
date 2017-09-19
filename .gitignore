@@ -5,3 +5,5 @@ test.html
 test.js
 test.css
 *.log
+desktop.ini
+npm-debug.log
