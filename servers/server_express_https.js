@@ -28,18 +28,19 @@ function log( req, res, next ) {
 }
 
 function httpsRedirect(req, res, next) {
-	if (!req.secure) {
+	if ( !req.secure ) {
 		console.log('redirecting to https');
 		res.redirect(`https://${req.headers.host}${req.url}`);
 	}
-	next(); return;
+	next()
+	return
 }
 
-const app = express();
+const app = express()
 
 // app.use, app.post, etc
-app.use(log);
-app.use(express.static(__dirname, {index: 'index.html'}));
+app.use( log )
+app.use(express.static(__dirname, {index: 'index.html'}))
 // app.use(httpsRedirect);
 
 app.get('/', function(req, res){
