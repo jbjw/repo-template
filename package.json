@@ -1,0 +1,42 @@
+{
+  "name": "repo-template",
+  "version": "1.0.0",
+  "description": "instructions to copy (OLD):\r change readme name\r delete .git folder\r change package.json or just remove",
+  "main": ".eslintrc.js",
+  "dependencies": {
+    "copy-webpack-plugin": "^4.5.1",
+    "file-loader": "^0.11.2",
+    "open-browser-webpack-plugin": "^0.0.5",
+    "raw-loader": "^0.5.1",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.11",
+    "eslint": "^3.19.0",
+    "eslint-config-p5js": "^1.0.1",
+    "eslint-loader": "^1.9.0",
+    "http-server": "^0.11.1",
+    "style-loader": "^0.16.1",
+    "webpack": "^4.4.1",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbjw/repo-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbjw/repo-template/issues"
+  },
+  "homepage": "https://github.com/jbjw/repo-template#readme"
+}
